@@ -1,0 +1,124 @@
+﻿@model DTOs.DTOModels.ComplexDTOs.CustomerUserDTO
+
+@{
+    ViewBag.Title = "NewUser";
+}
+
+@using (Html.BeginForm())
+{
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <style>
+
+        html, body { 
+            background-image: url('https://i.hizliresim.com/GZQYO2.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            height: 100%; 
+            font-family: 'Numans', sans-serif; }
+
+            .divider-text {
+                position: relative;
+                text-align: center;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            .divider-text span {
+                padding: 7px;
+                font-size: 12px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .divider-text:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                border-bottom: 1px solid #ddd;
+                top: 55%;
+                left: 0;
+                z-index: 1;
+            }
+        </style>
+
+    </head>
+   
+    <body>
+        <div class="container">
+
+            <div class="card" style="background-color:rgba(0,0,0,0.3)">
+                <article class="mx-auto" style="max-width: 400px;">
+                    <h4 class="card-title mb-5 mt-3 text-center" style="color:floralwhite">Üye Ol</h4>
+
+                    <form>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+
+                            @Html.TextBoxFor(c => c.FirstName, htmlAttributes: new { @class = "form-control", placeholder="Ad"})
+                        </div>
+
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+
+                            @Html.TextBoxFor(c => c.LastName, htmlAttributes: new { @class = "form-control", placeholder="Soyad" })
+                        </div>
+
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                            </div>
+
+                            @Html.TextBoxFor(c => c.eMail, htmlAttributes: new { @class = "form-control" , placeholder="E-Mail"})
+                        </div>
+
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+
+                            @Html.TextBoxFor(c => c.UserName, htmlAttributes: new { @class = "form-control", placeholder="Kullanıcı Adı" })
+                        </div>
+
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                            </div>
+
+                            @Html.TextBoxFor(c => c.Password, htmlAttributes: new { @class = "form-control" , placeholder="Şifre" })
+                        </div> 
+
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                            </div>
+                            <input class="form-control" placeholder="Şifre Tekrarı" type="password">
+                        </div> 
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-outline-info mt-3 mb-3 " style="margin-left:200px" data-target="#msg">Üye Ol</button>
+                        </div> 
+
+                        <p class="text-center" style="color:aliceblue">Zaten Üyeyim <a href="/User/SignIn"> Giriş Yap </a> </p>
+                    </form>
+                </article>
+            </div> 
+        </div>
+    </body>
+
+    </html>
+}
+

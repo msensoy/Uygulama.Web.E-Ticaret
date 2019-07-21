@@ -1,0 +1,72 @@
+﻿@model IEnumerable<DTOs.DTOModels.ComplexDTOs.BoxBoxTypeDTO>
+
+@{
+    ViewBag.Title = "Box";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div >
+   
+    <a href="@Url.Action("Create", "AdminBox")" class="btn btn-primary"><i class="fa fa-plus"></i> Add New</a>  
+</div>
+<br /><br />
+<div id="box" class="table-responsive ">
+    <table class="table table-condensed table-hover table-bordered table-striped table">
+        <tr>
+    <th>
+        @Html.DisplayNameFor(model => model.BoxName)
+    </th>
+    
+    <th>
+        @Html.DisplayNameFor(model => model.BoxType)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.Description)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.Price)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.UnitsInStock)
+    </th>
+</tr>
+
+@foreach (var item in Model)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BoxName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.BoxType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitsInStock)
+            </td>
+
+            <td>
+                <a class="btn btn-sm btn-primary" href="@Url.Action("Edit", "AdminBox", new { id = item.BoxID })" aria-label="Edit">
+                    <i class="fa fa-edit" aria-hidden="true"></i>
+                </a>
+                <a class="btn btn-sm btn-info" href="@Url.Action("Details", "AdminBox", new { id = item.BoxID })" aria-label="Details">
+                    <i class="fa fa-info" aria-hidden="true"></i>
+                </a>
+                <a class="sil btn btn-sm btn-danger" href="@Url.Action("Delete", "AdminBox", new { id = item.BoxID })" aria-label="Delete">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </a>
+                
+            </td>
+        </tr>
+}
+    
+
+    </table>
+</div>
+

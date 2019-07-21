@@ -1,0 +1,196 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{E1C5D978-1495-4CB1-B502-6048E8400379}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonType", "Common\CommonType.csproj", "{4048670B-6F68-4619-BD95-13E826DAB2E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dal", "Dal\Dal.csproj", "{FF1DCE66-CB2A-45B0-BAF5-6A4829244676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dal.Canli", "Dal.Canli\Dal.Canli.csproj", "{1EA4299C-9B3A-4187-A27B-82A47CCE1AF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{19B74B9F-3444-4385-83F0-F6F0BAA344BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityMapping", "EntityMapping\EntityMapping.csproj", "{3E08952C-FB7E-4367-9137-E3779147AC88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{84911050-E89B-4D2D-ACDD-78531891A2D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{74C44D90-2ADB-44F4-9BB7-C2DE3CCC582E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLLTiers", "BLLTiers", "{0A977814-F1B7-4801-A300-47F12900310F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DalTiers", "DalTiers", "{E6D54F1F-6D79-4DB7-8705-DC5235783375}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityTiers", "EntityTiers", "{749EFE7B-E38A-4661-BBC0-C13033DF2885}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dal.Test", "Dal.Test\Dal.Test.csproj", "{5F2E05E6-8F58-4CD8-A13F-5786AD5CBAA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.Abstract", "BLL.Abstract\BLL.Abstract.csproj", "{0D9BE56D-5148-43C4-9719-0876018755EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.Module", "BLL.Modules\BLL.Module.csproj", "{20F66A8B-122B-43A4-A6D5-C4CBB4D81F6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.Test", "BLL.Test\BLL.Test.csproj", "{0C980453-D3BF-4D39-9E17-5B6F59F1B0A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UITiers", "UITiers", "{DE827657-9D80-4C6B-A027-E3A050EC0244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupriseBox.MvcUI", "Gondor.MvcUI\SupriseBox.MvcUI.csproj", "{2035FB76-7BC6-4150-BB49-54AD80028309}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiTiers", "ApiTiers", "{B16D55C5-EF8C-49ED-8970-80EDC1253A43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupriseBox.WebApi", "Gondor.WebApi\SupriseBox.WebApi.csproj", "{AFFF3708-2278-4755-8325-205AABEFD742}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOs", "Dtos\DTOs.csproj", "{40D2B154-5D91-4065-BDAA-D093D2E2BE03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1C5D978-1495-4CB1-B502-6048E8400379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1C5D978-1495-4CB1-B502-6048E8400379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1C5D978-1495-4CB1-B502-6048E8400379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1C5D978-1495-4CB1-B502-6048E8400379}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4048670B-6F68-4619-BD95-13E826DAB2E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4048670B-6F68-4619-BD95-13E826DAB2E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4048670B-6F68-4619-BD95-13E826DAB2E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4048670B-6F68-4619-BD95-13E826DAB2E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1DCE66-CB2A-45B0-BAF5-6A4829244676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1DCE66-CB2A-45B0-BAF5-6A4829244676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1DCE66-CB2A-45B0-BAF5-6A4829244676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1DCE66-CB2A-45B0-BAF5-6A4829244676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA4299C-9B3A-4187-A27B-82A47CCE1AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA4299C-9B3A-4187-A27B-82A47CCE1AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA4299C-9B3A-4187-A27B-82A47CCE1AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA4299C-9B3A-4187-A27B-82A47CCE1AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B74B9F-3444-4385-83F0-F6F0BAA344BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B74B9F-3444-4385-83F0-F6F0BAA344BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B74B9F-3444-4385-83F0-F6F0BAA344BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B74B9F-3444-4385-83F0-F6F0BAA344BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E08952C-FB7E-4367-9137-E3779147AC88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E08952C-FB7E-4367-9137-E3779147AC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E08952C-FB7E-4367-9137-E3779147AC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E08952C-FB7E-4367-9137-E3779147AC88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84911050-E89B-4D2D-ACDD-78531891A2D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84911050-E89B-4D2D-ACDD-78531891A2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84911050-E89B-4D2D-ACDD-78531891A2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84911050-E89B-4D2D-ACDD-78531891A2D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74C44D90-2ADB-44F4-9BB7-C2DE3CCC582E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C44D90-2ADB-44F4-9BB7-C2DE3CCC582E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C44D90-2ADB-44F4-9BB7-C2DE3CCC582E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C44D90-2ADB-44F4-9BB7-C2DE3CCC582E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F2E05E6-8F58-4CD8-A13F-5786AD5CBAA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F2E05E6-8F58-4CD8-A13F-5786AD5CBAA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F2E05E6-8F58-4CD8-A13F-5786AD5CBAA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F2E05E6-8F58-4CD8-A13F-5786AD5CBAA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D9BE56D-5148-43C4-9719-0876018755EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D9BE56D-5148-43C4-9719-0876018755EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D9BE56D-5148-43C4-9719-0876018755EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D9BE56D-5148-43C4-9719-0876018755EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20F66A8B-122B-43A4-A6D5-C4CBB4D81F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F66A8B-122B-43A4-A6D5-C4CBB4D81F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F66A8B-122B-43A4-A6D5-C4CBB4D81F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F66A8B-122B-43A4-A6D5-C4CBB4D81F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C980453-D3BF-4D39-9E17-5B6F59F1B0A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C980453-D3BF-4D39-9E17-5B6F59F1B0A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C980453-D3BF-4D39-9E17-5B6F59F1B0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C980453-D3BF-4D39-9E17-5B6F59F1B0A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2035FB76-7BC6-4150-BB49-54AD80028309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2035FB76-7BC6-4150-BB49-54AD80028309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2035FB76-7BC6-4150-BB49-54AD80028309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2035FB76-7BC6-4150-BB49-54AD80028309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFFF3708-2278-4755-8325-205AABEFD742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFFF3708-2278-4755-8325-205AABEFD742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFFF3708-2278-4755-8325-205AABEFD742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFFF3708-2278-4755-8325-205AABEFD742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D2B154-5D91-4065-BDAA-D093D2E2BE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D2B154-5D91-4065-BDAA-D093D2E2BE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D2B154-5D91-4065-BDAA-D093D2E2BE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D2B154-5D91-4065-BDAA-D093D2E2BE03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF1DCE66-CB2A-45B0-BAF5-6A4829244676} = {E6D54F1F-6D79-4DB7-8705-DC5235783375}
+		{1EA4299C-9B3A-4187-A27B-82A47CCE1AF4} = {E6D54F1F-6D79-4DB7-8705-DC5235783375}
+		{19B74B9F-3444-4385-83F0-F6F0BAA344BE} = {749EFE7B-E38A-4661-BBC0-C13033DF2885}
+		{3E08952C-FB7E-4367-9137-E3779147AC88} = {749EFE7B-E38A-4661-BBC0-C13033DF2885}
+		{74C44D90-2ADB-44F4-9BB7-C2DE3CCC582E} = {0A977814-F1B7-4801-A300-47F12900310F}
+		{5F2E05E6-8F58-4CD8-A13F-5786AD5CBAA3} = {E6D54F1F-6D79-4DB7-8705-DC5235783375}
+		{0D9BE56D-5148-43C4-9719-0876018755EB} = {0A977814-F1B7-4801-A300-47F12900310F}
+		{20F66A8B-122B-43A4-A6D5-C4CBB4D81F6A} = {0A977814-F1B7-4801-A300-47F12900310F}
+		{0C980453-D3BF-4D39-9E17-5B6F59F1B0A7} = {0A977814-F1B7-4801-A300-47F12900310F}
+		{2035FB76-7BC6-4150-BB49-54AD80028309} = {DE827657-9D80-4C6B-A027-E3A050EC0244}
+		{AFFF3708-2278-4755-8325-205AABEFD742} = {B16D55C5-EF8C-49ED-8970-80EDC1253A43}
+		{40D2B154-5D91-4065-BDAA-D093D2E2BE03} = {0A977814-F1B7-4801-A300-47F12900310F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69199D44-090F-493B-BF60-747EE8360FE6}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 16
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/DenemeSubDomain
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BLL.Abstract\\BLL.Abstract.csproj
+		SccProjectTopLevelParentUniqueName1 = SupriseBoxProject.sln
+		SccProjectName1 = BLL.Abstract
+		SccLocalPath1 = BLL.Abstract
+		SccProjectUniqueName2 = BLL.Modules\\BLL.Module.csproj
+		SccProjectTopLevelParentUniqueName2 = SupriseBoxProject.sln
+		SccProjectName2 = BLL.Modules
+		SccLocalPath2 = BLL.Modules
+		SccProjectUniqueName3 = BLL.Test\\BLL.Test.csproj
+		SccProjectTopLevelParentUniqueName3 = SupriseBoxProject.sln
+		SccProjectName3 = BLL.Test
+		SccLocalPath3 = BLL.Test
+		SccProjectUniqueName4 = BLL\\BLL.csproj
+		SccProjectTopLevelParentUniqueName4 = SupriseBoxProject.sln
+		SccProjectName4 = BLL
+		SccLocalPath4 = BLL
+		SccProjectUniqueName5 = Common\\CommonType.csproj
+		SccProjectName5 = Common
+		SccLocalPath5 = Common
+		SccProjectUniqueName6 = Core\\Core.csproj
+		SccProjectName6 = Core
+		SccLocalPath6 = Core
+		SccProjectUniqueName7 = Dal.Canli\\Dal.Canli.csproj
+		SccProjectTopLevelParentUniqueName7 = SupriseBoxProject.sln
+		SccProjectName7 = Dal.Canli
+		SccLocalPath7 = Dal.Canli
+		SccProjectUniqueName8 = Dal.Test\\Dal.Test.csproj
+		SccProjectTopLevelParentUniqueName8 = SupriseBoxProject.sln
+		SccProjectName8 = Dal.Test
+		SccLocalPath8 = Dal.Test
+		SccProjectUniqueName9 = Dal\\Dal.csproj
+		SccProjectTopLevelParentUniqueName9 = SupriseBoxProject.sln
+		SccProjectName9 = Dal
+		SccLocalPath9 = Dal
+		SccProjectUniqueName10 = Dtos\\Dtos.csproj
+		SccProjectTopLevelParentUniqueName10 = SupriseBoxProject.sln
+		SccProjectName10 = Dtos
+		SccLocalPath10 = Dtos
+		SccProjectUniqueName11 = Entity\\Entity.csproj
+		SccProjectTopLevelParentUniqueName11 = SupriseBoxProject.sln
+		SccProjectName11 = Entity
+		SccLocalPath11 = Entity
+		SccProjectUniqueName12 = EntityMapping\\EntityMapping.csproj
+		SccProjectTopLevelParentUniqueName12 = SupriseBoxProject.sln
+		SccProjectName12 = EntityMapping
+		SccLocalPath12 = EntityMapping
+		SccProjectUniqueName13 = Helper\\Helper.csproj
+		SccProjectName13 = Helper
+		SccLocalPath13 = Helper
+		SccProjectUniqueName14 = Gondor.MvcUI\\SupriseBox.MvcUI.csproj
+		SccProjectTopLevelParentUniqueName14 = SupriseBoxProject.sln
+		SccProjectName14 = Gondor.MvcUI
+		SccLocalPath14 = Gondor.MvcUI
+		SccProjectUniqueName15 = Gondor.WebApi\\SupriseBox.WebApi.csproj
+		SccProjectTopLevelParentUniqueName15 = SupriseBoxProject.sln
+		SccProjectName15 = Gondor.WebApi
+		SccLocalPath15 = Gondor.WebApi
+	EndGlobalSection
+EndGlobal

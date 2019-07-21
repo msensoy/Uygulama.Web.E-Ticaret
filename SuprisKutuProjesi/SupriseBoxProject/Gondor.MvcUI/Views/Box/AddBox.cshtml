@@ -1,0 +1,38 @@
+﻿@model DTOs.DTOModels.ComplexDTOs.AllBoxTypesWithBoxDTO
+
+@{
+    ViewBag.Title = "AddBox";
+    Layout = "~/Views/Shared/Layouts/_LayoutPageMain.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+
+<div class="container" style="margin-top: 140px ">
+        <div class=" form-group col-3 mt-3">
+            @Html.LabelFor(b => b.Box.BoxName)
+            @Html.TextBoxFor(b => b.Box.BoxName, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(b => b.Box.BoxName)
+        </div>
+        <div class=" form-group col-3 mt-3">
+            @Html.LabelFor(b => b.Box.Description)
+            @Html.TextBoxFor(b => b.Box.Description, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(b => b.Box.Description)
+        </div>
+        <div class=" form-group col-3 mt-3">
+            @Html.LabelFor(b => b.Box.BoxTypeID)
+            @Html.DropDownListFor(b => b.Box.BoxTypeID,new SelectList(Model.BoxTypes,"ID","Type"),"Select Box Type" , htmlAttributes: new { @class = "form-control" })
+        </div>
+        <div class=" col-3 mt-3">
+            <button type="submit" value=" save"> Kaydet </button>
+        </div>
+    </div>
+    }
+
+
+
+
+
+
+
+

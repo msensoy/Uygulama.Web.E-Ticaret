@@ -1,0 +1,76 @@
+﻿@model IEnumerable<DTOs.DTOModels.EntityDTOs.BoxDTO>
+
+@{
+    ViewBag.Title = "BoxesMainPage";
+    Layout = "~/Views/Shared/Layouts/_LayoutPageMain.cshtml";
+}
+
+<section class="cat_product_area p_120">
+    <div class="container">
+        <div class="row flex-row-reverse">
+            <div class="col-lg-12">
+                <div class="product_top_bar">
+                    <div class="left_dorp">
+                        <select class="sorting">
+                            <option value="1">Default sorting</option>
+                            <option value="2">Default sorting 01</option>
+                            <option value="4">Default sorting 02</option>
+                        </select>
+                        <select class="show">
+                            <option value="1">Show 12</option>
+                            <option value="2">Show 14</option>
+                            <option value="4">Show 16</option>
+                        </select>
+                    </div>
+                    <div class="right_page ml-auto">
+                        <nav class="cat_page" aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item blank"><a class="page-link" href="#">...</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="latest_product_inner row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="f_p_item">
+                                <div class="f_p_img">
+                                    <img class="img-fluid" src="~/Content/Images/BoxImages/@item.ImageUrl" alt="">
+                                    <div class="p_icon">
+                                        <a href="SingleBox/@item.ID"><i class="lnr lnr-magnifier"></i></a>
+                                        <a id="addBasket_@item.ID" class="basketButton"><i class="lnr lnr-cart" onclick="catchID(@item.ID)"></i></a>
+                                    </div>
+                                </div>
+                                <a href="SingleBox/@item.ID"><h4>@item.BoxName</h4></a>
+                                <h5>@item.Price</h5>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<script>
+        function catchID(id) {
+            var catchID =id;
+            console.log(id)
+        var url = "@Url.Action("ShoppingCard", "Shopping")";
+        $.get(url, { BoxID:catchID}, function (d, s) {
+            console.log(d);
+            alert(d.box + d.message);
+        })
+        return false;
+    }
+</script>

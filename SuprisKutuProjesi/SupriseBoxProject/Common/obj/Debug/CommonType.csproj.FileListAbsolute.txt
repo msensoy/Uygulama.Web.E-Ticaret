@@ -1,0 +1,12 @@
+C:\Users\TOSHIBA\Source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\bin\Debug\Common.dll.config
+C:\Users\TOSHIBA\Source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\bin\Debug\Common.dll
+C:\Users\TOSHIBA\Source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\bin\Debug\Common.pdb
+C:\Users\TOSHIBA\Source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\bin\Debug\EntityFramework.dll
+C:\Users\TOSHIBA\Source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TOSHIBA\Source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\bin\Debug\EntityFramework.xml
+C:\Users\TOSHIBA\Source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TOSHIBA\Source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\obj\Debug\CommonType.csproj.CoreCompileInputs.cache
+C:\Users\TOSHIBA\Source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\obj\Debug\CommonType.csproj.CopyComplete
+C:\Users\TOSHIBA\Source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\obj\Debug\Common.dll
+C:\Users\TOSHIBA\Source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\obj\Debug\Common.pdb
+C:\Users\TOSHIBA\source\Workspaces\SuprisKutuProjesi\SupriseBoxProject\Common\obj\Debug\CommonType.csprojAssemblyReference.cache

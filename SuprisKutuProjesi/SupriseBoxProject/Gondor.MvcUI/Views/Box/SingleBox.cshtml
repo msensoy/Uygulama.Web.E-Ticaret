@@ -1,0 +1,72 @@
+﻿@model DTOs.DTOModels.ComplexDTOs.BoxBoxTypeDTO
+
+@{
+    ViewBag.Title = "SingleBox";
+    Layout = "~/Views/Shared/Layouts/_LayoutPageOthers.cshtml";
+}
+
+
+
+<div class="product_image_area">
+    <div class="container">
+        <div class="row s_product_inner">
+            <div class="col-lg-6">
+                <div class="s_product_img">
+
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="~/Content/Images/BoxImages/@Model.ImageUrl" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="~/Content/Images/BoxImages/@Model.ImageUrl" alt="Second slide">
+                            </div>
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="~/Content/Images/BoxImages/@Model.ImageUrl" alt="Third slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <div class="s_product_text">
+                    @Html.LabelFor(x => x.BoxName, "kutu deneme")
+                    <h3>@Model.BoxName</h3>
+                    <h2>@Model.Price TL</h2>
+                    <ul class="list">
+                        <li><a class="active" href="#"><span>Kutu Tipi</span> : @Model.BoxType</a></li>
+                        <li><span> Stok Durumu: @(Model.UnitsInStock > 0 ? "Stokta var" : " Stokta Yok") </span> </li>
+                    </ul>
+                    <p>@Model.Description</p>
+                    <div class="product_count">
+                        <label for="qty">Ürün miktarını arttırmak için lütfen sepetinize gidiniz</label>
+                       
+                    </div>
+                    <div class="card_area">
+
+                        @*@Html.ActionLink("Sepete Ekle", "ShoppingCard","Shopping", new { @Model.BoxID }, new { @class = "main_btn" })*@
+                        <button class="main_btn" id="addBasket">Sepete Ekle</button>
+
+                        <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
+                        <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/jquery-3.2.1.min.js"></script>
+
+<script>
+    $("#addBasket").click(function (e) {
+        e.preventDefault();
+         var url = "@Url.Action("ShoppingCard", "Shopping")";
+        $.get(url, { BoxID: @Model.BoxID}, function (d, s) {
+            console.log(d);
+                alert(d.box + d.message);
+        })
+        return false;
+    })
+</script>

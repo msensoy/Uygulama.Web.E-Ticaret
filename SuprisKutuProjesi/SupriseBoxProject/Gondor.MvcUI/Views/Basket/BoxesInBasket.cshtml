@@ -1,0 +1,164 @@
+﻿@using DTOs.DTOModels.EntityDTOs
+
+@model IEnumerable<DTOs.DTOModels.EntityDTOs.OrderDetailDTO>
+
+@{
+    ViewBag.Title = "BoxesInBasket";
+    Layout = "~/Views/Shared/Layouts/_LayoutPageOthers.cshtml";
+}
+
+
+
+<section class="cart_area">
+    @if (Model.Count() != 0)
+    {
+        using (Html.BeginForm("BoxesInBasket", "Basket", FormMethod.Post))
+        {
+            int i = 0;
+
+
+            <div class="container">
+                <div class="cart_inner">
+                    <div class="table-responsive">
+                        <table class="table" id="tbl">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    @Html.Hidden("shcartID-" + i + "", item.BoxID)
+
+                                    <tr>
+                                        <td>
+                                            <div class="media">
+                                                <div class="d-flex">
+                                                    <img src="" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <p>@item.BoxName</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <h5 id="boxPrice_@item.BoxID">@item.UnitPrice</h5>
+                                        </td>
+                                        <td>
+                                            <div class="product_count">
+                                                <input type="text" name="qty-@(i)" id="amount_@item.BoxID" maxlength="12" value="@item.BoxAmount" title="Quantity:" class="input-text qty">
+                                                <button onclick="fncIncrease(@item.BoxID)" class="increase items-count" type="button">
+                                                    <i class="lnr lnr-chevron-up"></i>
+                                                </button>
+                                                <button onclick="fncDecrease(@item.BoxID)" class="reduced items-count" type="button">
+                                                    <i class="lnr lnr-chevron-down"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <h5 id="totalBoxPrice_@item.BoxID">@item.UnitPrice</h5>
+                                        </td>
+
+                                    </tr>
+                                    i++;
+                                }
+
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <h5 id="subTotal">SubTotal = 0</h5>
+                                    </td>
+                                </tr>
+
+                                <tr class="out_button_area">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <div class="checkout_btn_inner">
+                                            <a class="gray_btn" href="#">Continue Shopping</a>
+                                            <button class="main_btn" type="submit">Proceed to checkout</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <h5 style=" text-align: center">Sepetinizde hiç ürün bulunmuyor gibi görünüyor . Neden biraz <a href="/Box/BoxesMainPage">alışveriş </a> yapmıyorsunuz?</h5>
+    }
+
+</section>
+
+<script src="~/js/jquery-3.2.1.min.js"></script>
+
+<script>
+
+    function fncIncrease(id) {
+        var result = document.getElementById('amount_' + id);
+        var amount = result.value;
+        if (!isNaN(amount)) {
+            result.value++
+            amount = result.value;
+        };
+        fncCalculateTotal(amount, id)
+        updateSubTotal()
+        return false;
+    }
+
+    function fncDecrease(id) {
+        var result = document.getElementById('amount_' + id);
+        var amount = result.value;
+        if (!isNaN(amount) & amount > 0) {
+            result.value--;
+            amount = result.value;
+        };
+        fncCalculateTotal(amount, id)
+        updateSubTotal()
+        return false;
+    }
+
+    function fncCalculateTotal(amount, id) {
+        var boxPrice = document.getElementById('boxPrice_' + id);
+        var boxPriceVal = boxPrice.textContent;
+        var totalPrice = parseFloat(amount) * parseFloat(boxPriceVal);
+
+        var totalPricePlace = document.getElementById('totalBoxPrice_' + id);
+        totalPricePlace.innerText = totalPrice;
+    }
+
+    $(function () {
+        var grandTotal = 0;
+        $("[id*=totalBoxPrice_]").each(function () {
+            grandTotal = grandTotal + parseFloat($(this).html());
+            $("[id*=subTotal]").html("SubTotal = " + grandTotal.toString());
+        })
+    });
+
+    function updateSubTotal() {
+        $(function () {
+            var grandTotal = 0;
+            $("[id*=totalBoxPrice_]").each(function () {
+                grandTotal = grandTotal + parseFloat($(this).html());
+                $("[id*=subTotal]").html("SubTotal = " + grandTotal.toString());
+            })
+        });
+    }
+
+
+
+
+
+</script>

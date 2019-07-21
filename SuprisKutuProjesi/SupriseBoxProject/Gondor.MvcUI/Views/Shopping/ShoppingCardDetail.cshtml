@@ -1,0 +1,123 @@
+﻿@model IEnumerable<DTOs.DTOModels.EntityDTOs.BoxDTO>
+
+@{
+    ViewBag.Title = "ShoppingCardDetail";
+    Layout = "~/Views/Shared/Layouts/_LayoutPageMain.cshtml";
+}
+
+<section class="cart_area">
+    <div class="container">
+        <div class="cart_inner">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Ürünler</th>
+                            <th scope="col">Tutar</th>
+                            <th scope="col">Miktar</th>
+                            <th scope="col">Toplam</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <p>@item.BoxName</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+
+
+                                    
+                               
+
+                                    <h5>@item.Price</h5>
+                                </td>
+                                <td>
+                                    <div class="product_count">
+                                        <input type="text" name="qty" id="@item.ID" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+                                        <button onclick="var result = document.getElementById('@item.ID'); var sst = result.value; if( !isNaN( sst )){result.value++; tpl=result.value* @item.Price; document.getElementById('@item.ID + @item.Price').innerHTML=tpl}else{return false;}" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                        <button onclick="var result = document.getElementById('@item.ID'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ){result.value--; tpl= @item.Price/result.value;document.getElementById('@item.ID + @item.Price').innerHTML=tpl}else{ return false;}" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                    </div>
+                                    <a class="gray_btn" href="#">Sil</a>
+                                </td>
+                                <td>
+                                   <p id="@item.ID + @item.Price">@item.Price</p>
+                                </td>
+                            </tr>
+                        }
+                        <tr class="bottom_button">
+                            <td>
+                                
+                            </td>
+                            <td></td>
+                            <td>
+                                <button type="button" class="btn btn-default">Sepeti Güncelle</button>
+                            <td>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <h5>Genel Toplam</h5>
+                            </td>
+                            <td>
+                                <h5 id="genelToplam"></h5>
+                            </td>
+                        </tr>
+                        <tr class="shipping_area">
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <h5>Kargo Bilgileri</h5>
+                            </td>
+                            <td>
+                                <div class="shipping_box">
+                                    <ul class="list">
+                                        <li><a href="#">Flat Rate: $5.00</a></li>
+                                        <li><a href="#">Free Shipping</a></li>
+                                        <li><a href="#">Flat Rate: $10.00</a></li>
+                                        <li class="active"><a href="#">Local Delivery: $2.00</a></li>
+                                    </ul>
+                                    <h6>Calculate Shipping  <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
+                                    <select class="shipping_select">
+                                        <option value="1">Bangladesh</option>
+                                        <option value="2">India</option>
+                                        <option value="4">Pakistan</option>
+                                    </select>
+                                    <select class="shipping_select">
+                                        <option value="1">Select a State</option>
+                                        <option value="2">Select a State</option>
+                                        <option value="4">Select a State</option>
+                                    </select>
+                                    <input type="text" placeholder="Postcode/Zipcode">
+                                    <a class="gray_btn" href="#">Update Details</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="out_button_area">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="checkout_btn_inner">
+                                    <a class="gray_btn" href="#">Alışverişe Devam Et</a>
+                                    <a class="main_btn" href="#">Siparişi Tamamla</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,122 @@
+﻿@model IEnumerable<DTOs.DTOModels.EntityDTOs.OrderDetailDTO>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layouts/_LayoutPageOthers.cshtml";
+    var currentUser = (DTOs.DTOModels.ComplexDTOs.CustomerUserDTO)ViewBag.currentUser;
+}
+
+@using (Html.BeginForm("PlaceOrder", "CheckOut", FormMethod.Post))
+{
+    //@Html.HiddenFor()//Custemer Id Gömülecek
+
+    @Html.Hidden("CustomerID",currentUser.CustomerID)
+
+
+    <section class="checkout_area p_120">
+        <div class="container">
+            <div class="billing_details">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h3>Billing Details</h3>
+                        <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                            <div class="col-md-6 form-group p_star">
+                                <input type="text" class="form-control" id="first" name="name" value="@currentUser.FirstName" readonly>
+                            </div>
+                            <div class="col-md-6 form-group p_star">
+                                <input type="text" class="form-control" id="last" name="name" value="@currentUser.LastName" readonly>
+                            </div>
+                            @*<div class="col-md-12 form-group">
+                                    <input type="text" class="form-control" id="company" name="company" placeholder="Company name">
+                                </div>*@
+                            @*<div class="col-md-6 form-group p_star">
+                                    <input type="text" class="form-control" id="number" name="number">
+                                    <span class="placeholder" data-placeholder="Phone number"></span>
+                                </div>*@
+                            <div class="col-md-6 form-group p_star">
+                                <input type="text" class="form-control" id="email" name="compemailany" value="@currentUser.eMail" readonly>
+                            </div>
+
+                            @*<div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" id="add1" name="add1">
+                                    <span class="placeholder" data-placeholder="Address line 01"></span>
+                                </div>*@
+                            @*<div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" id="add2" name="add2">
+                                    <span class="placeholder" data-placeholder="Address line 02"></span>
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" id="city" name="city">
+                                    <span class="placeholder" data-placeholder="Town/City"></span>
+                                </div>
+                                <div class="col-md-12 form-group p_star">
+                                    <select class="country_select">
+                                        <option value="1">District</option>
+                                        <option value="2">District</option>
+                                        <option value="4">District</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <div class="creat_account">
+                                        <input type="checkbox" id="f-option2" name="selector">
+                                        <label for="f-option2">Create an account?</label>
+                                    </div>
+                                </div>*@
+                            <div class="col-md-12 form-group">
+                                <div class="creat_account">
+                                    <h3>Shipping Details</h3>
+                                </div>
+                                <textarea class="form-control" name="Adress" id="message" rows="5" placeholder="Order Adress"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="order_box">
+                            <h2>Your Order</h2>
+                            <ul class="list">
+                                <li><a href="#">Boxes <span>Total</span></a></li>
+                                @foreach (var item in Model)
+                                {
+                                    <li><a href="#">@item.BoxName <span class="  middle">x @item.BoxAmount</span> <span class="last">$@item.TotalAmount</span></a></li>
+                                }
+                            </ul>
+                            <ul class="list list_2">
+                                <li><a href="#">Subtotal <span>$@ViewBag.SubTotal</span></a></li>
+                                <li><a href="#">Shipping <span>Flat rate: $50.00</span></a></li>
+                                <li><a href="#">Total <span>$@(ViewBag.SubTotal + 50) </span></a></li>
+                            </ul>
+                            <div class="payment_item">
+                                <div class="radion_btn">
+                                    <input type="radio" id="f-option5" name="selector">
+                                    <label for="f-option5">Check payments</label>
+                                    <div class="check"></div>
+                                </div>
+                                <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                            </div>
+                            <div class="payment_item active">
+                                <div class="radion_btn">
+                                    <input type="radio" id="f-option6" name="selector">
+                                    <label for="f-option6">Paypal </label>
+                                    <img src="img/product/single-product/card.jpg" alt="">
+                                    <div class="check"></div>
+                                </div>
+                                <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                            </div>
+                            <div class="creat_account">
+                                <input type="checkbox" id="f-option4" name="selector">
+                                <label for="f-option4">I’ve read and accept the </label>
+                                <a href="#">terms & conditions*</a>
+                            </div>
+                            <button class="main_btn" type="submit">Proceed to Paypal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+

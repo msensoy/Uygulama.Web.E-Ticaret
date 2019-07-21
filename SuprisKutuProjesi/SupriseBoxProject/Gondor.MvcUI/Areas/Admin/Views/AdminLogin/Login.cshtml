@@ -1,0 +1,38 @@
+﻿@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="~/Areas/Admin/Content/css/adminlogin.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <!------ Include the above in your HEAD tag ---------->
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <!-- Icon -->
+            <div class="fadeIn first">
+                @ViewBag.Uyari 
+                <img src="~/Areas/Admin/Content/Images/usericon.svg" style="width:100px;height100px" id="icon" alt="User Icon" />
+            </div>
+            <!-- Login Form -->
+          @using (Html.BeginForm("Login", "AdminLogin", FormMethod.Post))
+           {
+                <input type="text" id="login" class="fadeIn second" name="username" placeholder="Kullanıcı Adı">
+                <input type="password" id="password" class="fadeIn third" name="password" placeholder="Şifre">
+                <input type="submit" class="fadeIn fourth" value="Giriş Yap">
+            
+            <!-- Remind Passowrd -->
+           }
+        </div>
+    </div>
+</body>
+</html>
